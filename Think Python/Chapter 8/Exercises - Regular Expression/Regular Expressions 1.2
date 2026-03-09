@@ -1,0 +1,23 @@
+import re
+reader = open("pg345.txt", encoding = "utf-8")
+
+def find_first(pattern):
+    for line in reader:
+        result = re.search(pattern, line)
+        if result != None:
+            return result
+        
+result00= find_first("^Dracula") # ^ It's a special character that matches the beginning of a string, so we can find a a pattern a line that starts with a given pattern.
+reader.seek(0)
+result01 = find_first('Harker$') # The special character '$' matches the end of a string, so we can find a line that ends with a given pattern (ignoring the newline at the end)
+reader.seek(0)
+
+print(result00.string, "^ Operator")
+print(result01.string, "- $ Operator")
+print("\n")             
+
+pattern1 = "cent(er|re)"
+
+result03 = find_first(pattern1)
+
+print(result03.string)

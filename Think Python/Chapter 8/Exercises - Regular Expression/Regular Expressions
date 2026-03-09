@@ -1,0 +1,41 @@
+reader = open("pg345.txt", encoding = "utf-8")
+
+import re # The module re, is used for providing functions related to  regular expressions
+
+text = "I am Dracula; and I bid you welcome, Mr. Harker, to my house."
+
+pattern = 'Dracula'
+def searching():
+    result = re.search(pattern, text)  # object.method (Syntax for using any method) - Search Method:  It scans an entire string to find the first location where a given regular expression pattern produces a match;
+    print(result.string) # It returns all the string
+    print(result.group()) # It returns the part of the text that matched the pattern;
+    print(result.span()) # It returns the index in the text where the pattern starts and ends;
+    return result # If the pattern doesn't match the pattern, it returns "None";
+
+def find_first(pattern):
+    for line in reader:
+        result = re.search(pattern, line)
+        if result != None:
+            return result
+
+result = find_first("Harker")
+pattern1 =  r"Mina|Murray" # O barra é como se fosse um "OR", para testar dois valores de strings, caso seja da direita ou da esquerda. Serve para fazer um teste de match, ou da esquerda ou da direita
+
+# r define uma raw string (string bruta). Ele instrui o interpretador a ignorar sequências de escape (\n por exemplo), tratando contra-barras (\) como caracteres literais, o que é extremamente útil para caminhos de arquivo, expressões regulares e códigos que contêm muitas barras invertidas.
+# Uma raw string é uma string onde a barra invertida \ não é tratada como caractere de escape.
+result2 = find_first(pattern1)
+print(result2.string)
+print(result.string) # Notice that string is not a method. So what is it? It's actually an attribute that is a value (data) that belongs to an object. It just stores information, but doesn't necessarily do something. And it doesn't need parentheses.
+
+def count_matches(pattern):
+    count = 0
+    for line in reader:
+        result = re.search(pattern, line)
+        if result != None:
+            count += 1
+    return count
+
+print(count_matches("Mina|Murray"))
+
+
+

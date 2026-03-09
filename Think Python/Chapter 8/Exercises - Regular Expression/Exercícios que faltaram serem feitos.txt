@@ -1,0 +1,110 @@
+Exercício 5 — Emails
+
+Arquivo:
+
+contact: john@gmail.com
+admin@test.org
+invalid-email
+user123@yahoo.com
+
+Regex aproximada:
+
+[\w.-]+@[\w.-]+\.\w+
+
+Problema:
+
+Extrair todos os emails.
+
+Nível 3 — Manipulação de texto
+Exercício 6 — Palavras repetidas
+
+Arquivo:
+
+This is is a test
+I like like Python
+Everything is fine
+
+Problema:
+
+Detectar palavras duplicadas consecutivas.
+
+Regex:
+
+(\w+) \1
+Nível 4 — Exercícios mais difíceis
+Exercício 7 — Extrair URLs
+
+Arquivo:
+
+Visit https://google.com
+Go to http://example.org
+Text here
+
+Regex:
+
+https?://\S+
+
+Objetivo:
+
+Imprimir apenas os links.
+
+Exercício 8 — Encontrar palavras com letras e números
+
+Arquivo:
+
+abc123
+hello
+12345
+test99
+abc
+
+Problema:
+
+Encontrar palavras que possuem letras e números ao mesmo tempo.
+
+Dica:
+
+(?=.*[a-zA-Z])(?=.*\d)
+Exercício 9 — Extrair tudo entre aspas
+
+Arquivo:
+
+"Hello," he said
+"How are you?"
+No dialogue here
+
+Regex:
+
+".*?"
+Exercício 10 — Desafio estilo análise de livro
+
+Pegue um livro .txt (por exemplo Dracula, que você mencionou).
+
+Problema:
+
+encontrar todas as palavras que começam com vamp
+
+ignorar maiúsculas/minúsculas
+
+Regex:
+
+\bvamp\w*
+
+Dica:
+
+re.IGNORECASE
+Exercício difícil (nível programador)
+
+Crie um programa que leia um arquivo e encontre:
+
+todos os emails
+
+todos os telefones
+
+todos os links
+
+E imprima algo assim:
+
+EMAIL: john@gmail.com
+PHONE: 123-456-7890
+URL: https://google.com

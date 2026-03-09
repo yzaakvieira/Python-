@@ -1,0 +1,6 @@
+# Durante o capítulo, tem algumas coisas que gostaria de frizar, para caso queira revisar.
+# Na assinatura da função temos o cabeçalho da função (header) onde fica a declaração da função, e o corpo (body) onde fica os blocos de códigos (statements)
+# As funções quando definidas elas pertencem ao módulo __main__ onde contém a função definida. Mais pra frente veremos o que isso tem haver com o if __name__ = _main__. À nível de curiosidade
+# Adicionar parâmetros as funções chama-se generalização ou "generalization" - perdão pelos termos em inglês, serve somente como referência posterior.
+# Wrapping a piece of code up in a function is called encapsulation. One of the benefits of encapsulation is that it attaches a name to the code, which serves as a kind of documentation. Another advantage is that if you re-use the code, it is more concise to call a function twice than to copy and paste the body! 
+# Tá bom, resumindo: Quando colocamos blocos de código em uma função isso é chamado de encapsulamento.
